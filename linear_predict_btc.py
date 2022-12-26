@@ -9,7 +9,9 @@ import matplotlib.pyplot as plt
 
 # Use pandas to read the downloaded data into a DataFrame
 # df = pd.read_csv(response.content)
-df = pd.read_csv("Gemini_BTCUSD_d.csv")
+
+import os
+df = pd.read_csv(os.path.abspath("Gemini_BTCUSD_d.csv"))
 
 # Use the "Close" column as the target variable
 y = df["close"]
